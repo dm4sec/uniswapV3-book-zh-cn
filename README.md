@@ -28,7 +28,7 @@ https://github.com/Jeiwan/uniswapv3-code
 
 你可以在这里阅读本书:
 
-https://y1cunhui.github.io/uniswapV3-book-zh-cn/
+https://ryang-max.github.io/uniswapV3-book-zh-cn/
 
 
 
@@ -38,7 +38,7 @@ https://y1cunhui.github.io/uniswapV3-book-zh-cn/
 1. 安装 [Hugo](https://gohugo.io/).
 2. Clone the repo:
   ```shell
-  $ git clone https://github.com/y1cunhui/uniswapV3-book-zh-cn
+  $ git clone https://github.com/ryang-max/uniswapV3-book-zh-cn
   $ cd uniswapV3-book-zh-cn
   ```
 3. 运行:
