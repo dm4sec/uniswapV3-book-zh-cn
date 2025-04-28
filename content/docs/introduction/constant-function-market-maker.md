@@ -112,14 +112,14 @@ $$\Delta x = \frac{x \Delta y}{r(y - \Delta y)}$$
 恒定成绩函数的图像为二次双曲线：
 
 
-![The shape of the constant product formula curve](/images/milestone_0/the_curve.png)
+![The shape of the constant product formula curve](/static/images/milestone_0/the_curve.png)
 
 横纵轴分别表示池子中两种代币的数量。每一笔交易的起始点都是曲线上与当前两种代币比例相对应的点。为了计算交易获得的 token 数量，我们需要找到曲线上的一个新的点，其横坐标值为 $x+\Delta x$，也即池子中现在 token0 的数量加上我们卖出的数量。y 轴上的变化量就是我们将会获得的 token1 的数量。
 
 
 下面我们来看一个更加具体的例子:
 
-![Desmos chart example](/images/milestone_0/desmos.png)
+![Desmos chart example](/static/images/milestone_0/desmos.png)
 
 1. 紫色的线是公式代表的双曲线，横纵坐标轴代表池子中代币资产的数目（注意到在一开始，两种代币的数量相等）
 2. 起始价格为 1
