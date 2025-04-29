@@ -16,7 +16,7 @@ weight: 1
 在本书中，我们将会搭建一个运行在以太坊(Ethereum)上的去中心化交易所(DEX)。DEX的设计模式非常复杂多样，因此我们先来考虑中心化交易所的设计。中心化交易所(CEX)的核心为*订单簿(order book)*，它存储了用户的所有买单和卖单。订单簿中的每一笔订单都包含了订单成交的价格以及成交数量。
 
 
-![Order book example](/images/milestone_0/orderbook.png)
+![Order book example](/static/images/milestone_0/orderbook.png)
 
 交易能够正常进行的保障是*流动性(liquidity)*，也即整个市场中所有可用的资产数目。假设你希望购买一个衣柜但是没有人售卖，即为没有流动性；如果你希望卖出一个衣柜但是没有人愿意购买，即为市场有流动性但是没有买方。没有流动性，就无法在市场中进行买卖。
 
@@ -45,7 +45,7 @@ weight: 1
 在 AMM 中，一个核心概念为**池子(pooling)**：每个合约都是一个存储流动性的*池子*，允许不同的用户（包括其他合约）在其中进行某种方式的交易。AMM 中有两种角色，*流动性提供者(LP)*以及交易者(trader)；这两方通过流动性池进行交互，而交互的方式由合约进行规定且不可更改。
 
 
-![Automated Market Maker simplified](/images/milestone_0/amm_simplified.png)
+![Automated Market Maker simplified](/static/images/milestone_0/amm_simplified.png)
 
 这种交易方法与 CEX 的关键区别在于： **智能合约是完全自动化并且不受任何人控制的**。没有经理，没有系统管理员，没有特权用户，一切都没有。这里只有 LP 和交易者，任何人都可以担任这两种角色（也可以同时），并且所有的算法都是公开的、程序规定的、不可更改的。
 
