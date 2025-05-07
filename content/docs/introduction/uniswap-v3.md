@@ -26,7 +26,7 @@ Uniswap V2 使用 AMM 机制实现了一个通用的交易市场。然而，并�
 
 导致这个问题出现的原因是，Uniswap V2 池子的流动性是分布在无穷区域上的——池子允许在任何价格的交易发生，从0到正无穷：
 
-![The curve is infinite](/images/milestone_0/curve_infinite.png)
+![The curve is infinite](/static/images/milestone_0/curve_infinite.png)
 
 这听起来好像不是一个坏事，但事实上它导致了资产利用效率的不足。一个资产的历史价格通常是在某个区间内的，不管这个区间是大还是小。比如，ETH的历史价格大致在 <span>$0.75</span>
 到 <span>$4,800</span> 这个区间（数据来源 [CoinMarketCap](https://coinmarketcap.com/currencies/ethereum/)）。在今天（2022年6月），1 个 ETH 的现货价格是 <span>$1800</span>，没有人会愿意用 <span>$5000</span> 购买一个 ETH，所以在这个价格上提供流动性是毫无用处的。因此，在远离当前价格区间的、永远不会达到的某个点上提供流动性是毫无意义的。
@@ -41,7 +41,7 @@ Uniswap V3 引入了 *集中流动性(concentrated liquidity)* 的概念：LP �
 
 下面，我们来对这种机制进行可视化。我们并不是重新选择一个有限的曲线，而是我们把它在价格 $a$ 与价格 $b$ 之间的部分截取出来，把它们当作是是曲线的边界。更进一步，我们把曲线进行平移使得边界点落在坐标轴上，于是得到了下图：
 
-![Uniswap V3 price range](/images/milestone_0/curve_finite.png)
+![Uniswap V3 price range](/static/images/milestone_0/curve_finite.png)
 
 > 它看起来或许有点单调， 因此 Uniswap V3 有许多的价格区间——这样它们就不会感到孤单了 🙂
 
@@ -55,7 +55,7 @@ Uniswap V3 引入了 *集中流动性(concentrated liquidity)* 的概念：LP �
 
 下面一图展示了 [USDC/ETH 池子的流动性分布](https://info.uniswap.org/#/pools/0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8):
 
-![Liquidity in the real USDC/ETH pool](/images/milestone_0/usdceth_liquidity.png)
+![Liquidity in the real USDC/ETH pool](/static/images/milestone_0/usdceth_liquidity.png)
 
 可以看到，大量流动性集中在现价的附近，而较远的价格区间中的流动性较少——这是因为 LP 更希望提高它们的资产利用效率。当然，整个区间也不是无穷的，在图片右侧也显示了其上界。
 
@@ -121,7 +121,7 @@ $L$ 和 $\sqrt{P}$ 让我们不再需要存储和更新池子资产数量。并�
 正如我们前面说到的，V2 中的无穷价格区间在 V3 中被分成了更小的价格区间，每个区间都由上下界端点进行限制。为了进行这些边界的协调，V3引入了 *ticks*。
 
 
-![Price ranges and ticks](/images/milestone_0/ticks_and_ranges.png)
+![Price ranges and ticks](/static/images/milestone_0/ticks_and_ranges.png)
 
 在 V3，整个价格区间由离散的、均匀分布的 ticks 进行标定。每个 tick 有一个 index 和对应的价格：
 
