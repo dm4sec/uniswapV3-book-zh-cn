@@ -112,7 +112,7 @@ $$L = \sqrt{xy}$$
 
 为了计算这个价格区间的 $L$，我们来回顾我们之前讨论过的一个有趣的点：价格区间可以被**耗尽**。我们可以将一个价格区间的某种 token 全部买走，使得该区间中只有另一种 token：
 
-![Range depletion example](/images/milestone_1/range_depleted.png)
+![Range depletion example](/static/images/milestone_1/range_depleted.png)
 
 在上图中的两个边界点，区间流动性池中都只有一种 token：在 $a$ 点池子里只有 ETH，在 $b$ 点只有 USDC。
 
@@ -128,7 +128,7 @@ $$L = \sqrt{xy}$$
 
 因此，左半边的流动性仅由 token $x$提供，因此只通过 token $x$ 数量计算出来。类似地，右边的流动性仅由 token $y$ 提供因此仅由提供的 token $y$ 数量计算出来。
 
-![Liquidity on the curve](/images/milestone_1/curve_liquidity.png)
+![Liquidity on the curve](/static/images/milestone_1/curve_liquidity.png)
 
 这也是为什么，我们会计算出两个不同的 $L$ 并选择其中一个。选择哪个呢？选择较小的那个。为什么？因为较大的那个流动性包含了较小的流动性。我们希望流动性均匀分布在我们所提供的价格区间中，因此左右提供的流动性需要保持一致。如果我们选择较大的那个，用户所提供的某种 token 的数量可能会大于其指定的数量，来平衡两边的流动性。这的确理论上是可行的，但是会让整个智能合约变得更加复杂。
 
