@@ -24,7 +24,7 @@ weight: 1
 模型的图像大致如下：
 
 
-![Buy ETH for USDC visualization](/images/milestone_1/buy_eth_model.png)
+![Buy ETH for USDC visualization](/static/images/milestone_1/buy_eth_model.png)
 
 
 
