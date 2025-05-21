@@ -16,7 +16,7 @@ weight: 7
 现在，我们可以进行这个 milestone 的最后一步了——搭建一个 UI！
 
 
-![Interface of the UI app](/images/milestone_1/ui.png)
+![Interface of the UI app](/static/images/milestone_1/ui.png)
 
 由于搭建前端 app 并不是本书的主要目的，本书将不会讲解如何从头搭建一个这样的前端，而是展示如何使用 MetaMask 与智能合约进行交互。
 
@@ -30,7 +30,7 @@ MetaMask 是一个浏览器插件的以太坊钱包。它能够创建和存储�
 
 除此之外，MetaMask 还能够作为 signer 和 provider 来运行。作为 provider，它链接到一个以太坊节点，并且提供一个接口来使用对应节点的 JSON-RPC API。作为一个 signer，它提供了一个能够进行安全交易签名的接口，因此能够使用钱包中的私钥来签名任意交易。
 
-![How MetaMask works](/images/milestone_1/metamask.png)
+![How MetaMask works](/static/images/milestone_1/metamask.png)
 
 ### 常用库
 
@@ -81,7 +81,7 @@ const connect = () => {
 
 `eth_chainId` 会请求 MetaMask 连接到的节点的 chain ID。在获取地址和 chain ID 之后，通常可以把它展示在前端页面：
 
-![MetaMask is connected](/images/milestone_1/ui_metamask_connected.png)
+![MetaMask is connected](/static/images/milestone_1/ui_metamask_connected.png)
 
 ### 提供流动性
 
