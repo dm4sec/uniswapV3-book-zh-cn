@@ -50,7 +50,7 @@ contract UniswapV3Pool {
 
 这里的存储方式是一个mapping，key 的类型是 `int16`，value 的类型是 `uint256`。想象一个无穷的 0/1 数组：
 
-![Tick indexes in tick bitmap](/images/milestone_2/tick_bitmap.png)
+![Tick indexes in tick bitmap](/static/images/milestone_2/tick_bitmap.png)
 
 数组中每个元素都对应一个 tick。为了更好地在数组中寻址，我们把数组按照字的大小划分：每个子数组为 256 位。为了找到数组中某个 tick 的位置，我们使用如下函数：
 
