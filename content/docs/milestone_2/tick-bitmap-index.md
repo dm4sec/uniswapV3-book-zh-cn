@@ -120,7 +120,7 @@ print(bin(word ^ mask))
 
 这分别对应两个方向交易时价格的移动：
 
-![Finding next initialized tick during a swap](/images/milestone_2/find_next_tick.png)
+![Finding next initialized tick during a swap](/static/images/milestone_2/find_next_tick.png)
 
 > 注意到，在代码中，方向是相反的：当购买 token $x$ 时，我们实际上在搜寻**左边**的流动性 tick；当卖出 token $x$ 时，我们搜寻**右边**的 tick。这仅仅在 word 内部成立，而 word 之间的顺序还是正序的。
 
