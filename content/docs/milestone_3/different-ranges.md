@@ -51,7 +51,7 @@ function mint(
 
 在交易中，限价单是一种当价格突破用户设定的某个点的时候才会被执行的订单。例如，你希望开一个限价单，当 ETH 价格低于 $1000 的时候买入一个 ETH。类似地，你可以使用限价单来出售资产。在Uniswap V3 中，你可以通过在非活跃价格区间提供流动性来达到类似的目的。让我们来看一下它如何工作：
 
-![Liquidity ranges outside of the current price](/images/milestone_3/ranges_outside_current_price.png)
+![Liquidity ranges outside of the current price](/static/images/milestone_3/ranges_outside_current_price.png)
 
 如果你在低于或高于现价的位置提供流动性（整个价格区间都低于/高于现价），那么你提供的流动性将完全由**一种资产**组成——两种资产中较便宜的那一种。在我们的例子中，我们的池子是把ETH作为 token $x$，把USDC作为 token $y$ ，我们的价格定义为：
 
@@ -61,7 +61,7 @@ $$P = \frac{y}{x}$$
 
 回顾一下我们在简介中的图表：
 
-![Price range depletion](/images/milestone_1/range_depleted.png)
+![Price range depletion](/static/images/milestone_1/range_depleted.png)
 
 如果我们购买这个区间中所有可用的 ETH，这个区间内将只会由另一种 token 组成，USDC，并且价格将会沿着曲线移动到最右边。这个价格，也即 $\frac{y}{x}$，会**升高**。如果有一个价格区间在当前区间的右边，它将需要提供 ETH 的流动性，并且仅包含 ETH：它需要为接下来的交易提供 ETH。如果我们持续购买并且拉高价格，我们可能会继续“耗尽”下一个价格区间，也即买走它所有的 ETH 并卖出 USDC。同样，这个区间会以全部是 USDC 而中止，现价移出这个区间。
 
