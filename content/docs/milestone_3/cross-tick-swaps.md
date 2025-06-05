@@ -23,7 +23,7 @@ weight: 3
 
 让我们来分析这样一个场景：
 
-![The dynamic of price ranges](/images/milestone_3/price_range_dynamics.png)
+![The dynamic of price ranges](/static/images/milestone_3/price_range_dynamics.png)
 
 在图中有三个价格区间。最上面的一个是现在参与交易的区间，因为它包含现价。这个价格区间的流动性存储在池子合约中的 `liquidity` 变量中。
 
@@ -225,7 +225,7 @@ function cross(mapping(int24 => Tick.Info) storage self, int24 tick)
 
 ### 单个价格区间
 
-![Swap within price range](/images/milestone_3/swap_within_price_range.png)
+![Swap within price range](/static/images/milestone_3/swap_within_price_range.png)
 
 这就是我们之前所用的场景。当我们更新代码后，我们仍然需要确保之前的功能仍然正常工作。
 
@@ -355,7 +355,7 @@ function cross(mapping(int24 => Tick.Info) storage self, int24 tick)
 
 ### 连续的价格区间
 
-![Swap over consecutive price ranges](/images/milestone_3/swap_consecutive_price_ranges.png)
+![Swap over consecutive price ranges](/static/images/milestone_3/swap_consecutive_price_ranges.png)
 
 - 购买 ETH:
     ```solidity
@@ -410,7 +410,7 @@ function cross(mapping(int24 => Tick.Info) storage self, int24 tick)
 
 ### 部分重叠的价格区间
 
-![Swap over partially overlapping price ranges](/images/milestone_3/swap_partially_overlapping_price_ranges.png)
+![Swap over partially overlapping price ranges](/static/images/milestone_3/swap_partially_overlapping_price_ranges.png)
 
 - 购买 ETH:
     ```solidity
