@@ -19,7 +19,7 @@ weight: 8
 
 ## 添加流动性对话框
 
-![Add Liquidity dialog window](/images/milestone_3/add_liquidity_dialog.png)
+![Add Liquidity dialog window](/static/images/milestone_3/add_liquidity_dialog.png)
 
 这一步的改变会最终移除代码中硬编码的流动性数量，并且允许我们在任意价格区间添加流动性。
 
@@ -59,7 +59,7 @@ const amount1Min = amount1Desired.mul((100 - slippage) * 100).div(10000);
 
 尽管我们是我们系统的唯一用户因此永远不会遇到滑点的问题，我们还是要增加一个输入项来对于交易过程进行滑点保护。
 
-![Main screen of the web app](/images/milestone_3/slippage_tolerance.png)
+![Main screen of the web app](/static/images/milestone_3/slippage_tolerance.png)
 
 在交易中，滑点保护是通过限制价格来实现的——我们在交易过程中不会超过或者低于这个价格。这意味着我们需要在发送交易之前就知道价格。然而我们并不需要在前端对此进行计算，因为我们已经在报价合约中实现了相关功能：
 
